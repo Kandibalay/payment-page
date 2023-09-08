@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Payment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-box">
+        <div class="front">
+          <div class="image">
+            <div class="chip">
+              <div class="inner">
+                <p></p>
+              </div>
+            </div>
+            <div id="visa">
+              <img
+                src="./images/visa logo.png"
+                alt="visa logo"
+                class="visa-logo"
+              />
+            </div>
+          </div>
+          <div id="number-box">
+            <div class="card-number-box" id="box1"></div>
+            <div class="card-number-box" id="box2"></div>
+            <div class="card-number-box" id="box3"></div>
+            <div class="card-number-box" id="box4"></div>
+          </div>
+          
+          <div class="details">
+            <div class="holder">
+              <span>Card holder</span>
+              <div class="card-holder-name"></div>
+            </div>
+            <div class="expiration">
+              <span>Expires</span>
+              <div class="expiry-date">
+                <span class="exp-month"></span>
+                <span class="exp-year"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="secure">
+                <span>cvv</span>
+                <div class="cvv-box"></div>
+                <img src="images/visa logo.png" alt="visa logo" class="visa-logo">
+            </div>
+
+        </div>
+      </div>
+      <form action="">
+        <div class="input-detail">
+          <span>card number</span>
+          <div id="main-details">
+            <input type="text" maxlength="4" class="card-number" id="number1"  />
+            <input type="text" maxlength="4" class="card-number" id="number2" />
+            <input type="text" maxlength="4" class="card-number" id="number3" />
+            <input type="text" maxlength="4" class="card-number" id="number4" />
+          </div>
+          
+        </div>
+        <div class="input-detail">
+          <span>card holder</span>
+          <input type="text" class="card-holder" />
+        </div>
+        <div class="key-details">
+          <div class="input-detail">
+            <span>Expiration Date</span>
+            <select name="month" id="month-input">
+              <option value="month" selected disabled></option>
+              <option value="jan" class="date">Jan</option>
+              <option value="feb" class="date">Feb</option>
+              <option value="mar" class="date">Mar</option>
+              <option value="apr" class="date">Apr</option>
+              <option value="may" class="date">May</option>
+              <option value="jun" class="date">Jun</option>
+              <option value="jul" class="date">Jul</option>
+              <option value="aug" class="date">Aug</option>
+              <option value="sep" class="date">Sep</option>
+              <option value="oct" class="date">Oct</option>
+              <option value="nov" class="date">Nov</option>
+              <option value="dec" class="date">Dec</option>
+            </select>
+            <select name="year" id="year-input">
+              <option value="year" selected disabled></option>
+              <option value="2024" class="date">2024</option>
+              <option value="2025" class="date">2025</option>
+              <option value="2026" class="date">2026</option>
+              <option value="2027" class="date">2027</option>
+              <option value="2028" class="date">2028</option>
+              <option value="2029" class="date">2029</option>
+              <option value="2030" class="date">2030</option>
+              <option value="2031" class="date">2031</option>
+              <option value="2032" class="date">2032</option>
+              <option value="2033" class="date">2033</option>
+              <option value="2034" class="date">2034</option>
+              <option value="2035" class="date">2035</option>
+            </select>
+          </div>
+          <div class="input-detail" id="cvv-input">
+            <span>CVV</span>
+            <input type="text" maxlength="3" class="cvv-input"/>
+          </div>
+        </div>
+        <div class="input-detail">
+          <input type="submit" value="submit" class="submit-btn"/>
+        </div>
+        <div id="successful">
+            <h2>Your Payment was Successful</h2>
+            <img src="./images/tick.png" alt="">
+            <button id="complete">OK</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ccd4b0, #badbc6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.container form {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 450px;
+  padding: 160px 40px 50px 40px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.container form .input-detail {
+  margin-top: 20px;
+  width: 100%;
+}
+.container form .input-detail span {
+  display: block;
+  font-size: 10px;
+  color: #969696;
+  margin-bottom: 6px;
+}
+#main-details {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+.card-number {
+  flex: 1;
+  width: 100%;
+  color: #7a3b52;
+  font-size: 14px;
+  padding: 10px 10px;
+  border: 1px solid #969696;
+  border-radius: 3px;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-holder {
+  color: #7a3b52;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 14px;
+  border: 1px solid #969696;
+  border-radius: 3px;
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.key-details {
+  display: flex;
+}
+#month-input,
+#year-input,
+.cvv-input {
+  width: 80px;
+  color: #7a3b52;
+  font-size: 14px;
+  padding: 10px 10px;
+  border: 1px solid #969696;
+  border-radius: 3px;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+.date {
+  color: #7a3b52;
+}
+#cvv-input {
+  width: 80px;
+  float: right;
+}
+.submit-btn {
+  padding: 14px;
+  width: 100%;
+  font-size: 18px;
+  background: #449397;
+  border: 1px solid #449397;
+  border-radius: 3px;
+  color: #ffffff;
+  box-shadow: 0px 4px 1px rgba(16, 16, 16, 0.1);
+  cursor: pointer;
+  transition: 2s linear;
+}
+input {
+  outline: none;
+}
+input:focus,input:hover{
+  border: 2px solid #969696;
+  cursor: pointer;
+}
+.card-number:focus,
+.card-number:hover{
+  transform: translateX(3px);
+  transition: 0.4s linear;
+  width: 79px;
+}
+.card-holder:focus, .card-holder:hover{
+  transform: translateX(5px);
+  transition: 0.4s linear;
+  width: 98%;
+}
+.cvv-input:hover{
+    transform: translateY(1px);
+    transition: 1s linear;
+    width: 99%;  
+}
+.submit-btn:hover {
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.card-box {
+  position: relative;
+  height: 240px;
+  width: 390px;
+  margin-bottom: -150px;
+  margin-top: 40px;
+  color: #b69aa0;
+}
+.card-box .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #a75968, #73364e);
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.4s ease-out;
+}
+.image {
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+}
+.chip {
+  padding: 6px;
+  border-radius: 8px;
+  background: #d3e9f4;
+}
+.inner {
+  border: 2px solid #dacdd2;
+  padding: 12px 18px;
+  border-radius: 3px;
+}
+.visa-logo {
+  width: 60px;
+}
+#visa {
+  position: relative;
+  left: 230px;
+}
+#number-box{
+    display: flex;
+    gap: 5px;
+}
+.card-number-box {
+    flex: 1;
+  margin: 50px 0px 10px 0px;
+  font-size: 22px;
+}
+.details {
+  display: flex;
+  position: relative;
+  margin-top: 40px;
+  font-size: 12px;
+}
+.card-holder-name {
+  font-size: 18px;
+}
+.expiration {
+  position: absolute;
+  left: 285px;
+}
+.card-box .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #a75968, #73364e);
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px 0px;
+  text-align: right;
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.4s ease-out;
+}
+.card-box .back .stripe {
+  background-color: #000;
+  width: 100%;
+  margin: 10px 0px;
+  height: 50px;
+}
+.cvv-box {
+  height: 40px;
+  width: 90%;
+  border: 2px solid #fff;
+  background: #fff;
+  margin: 10px auto;
+}
+.secure span {
+  position: relative;
+  margin-right: 20px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.secure img {
+  position: relative;
+  margin: 20px;
+}
+#successful {
+    display: none;
+    position: absolute;
+    height: 180px;
+    width: 200px;
+    top: 250px;
+    border: 2px solid #ece7e7;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px;
+    transform: translate(50%,0%);
+    
+}
+
+#successful img {
+    width: 50px;
+    position: relative;
+    left: 60px;
+    top: 5px;
+}
+#successful h2 {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    color: #73364e;
+}
+#successful button {
+    width: 150px;
+    position: relative;
+    top: 10px;
+    padding: 5px;
+    left: 10px;
+    background: #969696;
+    border: 1px solid #969696;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 3px 1px rgba(16, 16, 16, 0.1);
+    cursor: pointer;
+}
